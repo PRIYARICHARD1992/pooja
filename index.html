@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      color: white;
+      text-align: center;
+      font-size: 100px;
+      font-weight: bold;
+      font-family: sans-serif;
+      position: relative;
+      bottom: 150px;
+    }
+
+    p {
+      color: white;
+      text-align: center;
+      width: 87%;
+      font-size: 20px;
+      font-weight: bold;
+      padding-left: 5%;
+      font-family: sans-serif;
+      position: relative;
+      bottom: 150px;
+    }
+
+    a1 {
+      color: white;
+      font-family: sans-serif;
+      font-size: 20px;
+      position: relative;
+      bottom: 110px;
+      left: 620px;
+    }
+
+    a1:hover {
+      color: goldenrod;
+    }
+
+    a2 {
+      color: violet;
+      font-family: sans-serif;
+      position: relative;
+      font-size: 20px;
+      bottom: 50px;
+      left: 470px;
+    }
+
+    a2:hover {
+      text-decoration: underline;
+    }
+
+    .topnav {
+      border: 2px hidden black;
+      background-color: mediumblue;
+      height: 100px;
+      width: 1520px;
+      bottom: 350px;
+      position: sticky;
+      top: 20%;
+
+    }
+
+    .title {
+      display: flex;
+      position: relative;
+      bottom: 240px;
+      left: 200px;
+    }
+
+    .title li {
+      list-style: none;
+      font-size: 15px;
+      font-weight: bold;
+      font-family: sans-serif;
+      color: white;
+      position: relative;
+      left: 50px;
+
+    }
+
+    .title a {
+      padding: 15px;
+      position: relative;
+      bottom: 15px;
+    }
+
+    .title a:hover {
+      color: black;
+      background-color: goldenrod;
+    }
+
+    .title a.active {
+      color: black;
+      background-color: goldenrod;
+    }
+
+    .about {
+      display: none;
+      position: absolute;
+      list-style: none;
+      top: 250%;
+      min-width: 300px;
+    }
+
+    .about a {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      color: black;
+      text-align: left;
+      position: relative;
+      right: 80px;
+      bottom: 30px;
+
+    }
+
+    .about a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .title li:nth-child(2):hover .about {
+      display: block;
+    }
+
+    .types {
+      display: none;
+      position: absolute;
+      list-style: none;
+      top: 250%;
+      left: 0%;
+      min-width: 200px;
+      z-index: 2;
+    }
+
+    .types a {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      color: black;
+      text-align: left;
+      right: 90px;
+      bottom: 30px;
+
+    }
+
+    .types a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .title li:nth-child(3):hover .types {
+      display: block;
+    }
+
+    .details {
+      display: none;
+      position: absolute;
+      list-style: none;
+      top: 250%;
+      left: 0%;
+      min-width: 300px;
+      z-index: 2;
+    }
+
+    .details a {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      color: black;
+      text-align: left;
+      right: 90px;
+      bottom: 30px;
+
+    }
+
+    .details a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .title li:nth-child(4):hover .details {
+      display: block;
+    }
+
+    .Admission {
+      display: none;
+      position: absolute;
+      list-style: none;
+      top: 250%;
+      left: 0%;
+      min-width: 200px;
+      z-index: 2;
+    }
+
+    .Admission a {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      color: black;
+      text-align: left;
+      right: 90px;
+      bottom: 30px;
+
+    }
+
+    .Admission a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .title li:nth-child(5):hover .Admission {
+      display: block;
+    }
+
+    .curricular {
+      display: none;
+      position: absolute;
+      list-style: none;
+      top: 250%;
+      left: 0%;
+      min-width: 300px;
+      z-index: 2;
+    }
+
+    .curricular a {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      color: black;
+      text-align: left;
+      right: 90px;
+      bottom: 30px;
+
+    }
+
+    .curricular a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .title li:nth-child(7):hover .curricular {
+      display: block;
+    }
+
+    .cell {
+      display: none;
+      position: absolute;
+      list-style: none;
+      top: 250%;
+      left: 0%;
+      min-width: 300px;
+      z-index: 2;
+    }
+
+    .cell a {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      color: black;
+      text-align: left;
+      right: 90px;
+      bottom: 30px;
+
+    }
+
+    .cell a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .title li:nth-child(8):hover .cell {
+      display: block;
+    }
+
+    .naac {
+      display: none;
+      position: absolute;
+      list-style: none;
+      top: 250%;
+      left: 0%;
+      min-width: 150px;
+      z-index: 2;
+    }
+
+    .naac a {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      color: black;
+      text-align: left;
+      right: 90px;
+      bottom: 30px;
+
+    }
+
+    .naac a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .title li:nth-child(9):hover .naac {
+      display: block;
+    }
+
+    .committee {
+      display: none;
+      position: absolute;
+      list-style: none;
+      top: 250%;
+      left: 0%;
+      min-width: 350px;
+      z-index: 2;
+    }
+
+    .committee a {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      color: black;
+      text-align: left;
+      right: 150px;
+      bottom: 30px;
+
+    }
+
+    .committee a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .title li:nth-child(10):hover .committee {
+      display: block;
+    }
+
+    .topnav img {
+      height: 100px;
+      width: 100px;
+
+    }
+
+    .topnav h3 {
+      position: relative;
+      color: white;
+      font-family: sans-serif;
+      font-size: 50px;
+      left: 110px;
+      bottom: 150px;
+    }
+
+    .topnav h4 {
+      color: white;
+      letter-spacing: 3px;
+      font-family: sans-serif;
+      position: relative;
+      left: 105px;
+      bottom: 195px;
+    }
+  </style>
+</head>
+
+<body style="background-color: #191970;">
+  <div class="topnav">
+    <img src= "assets/OIP.jpg">
+    <h3> A B C </h3>
+    <h4> INSTITUTIONS </h4>
+    <ul class="title">
+      <li><a class="active"> Home </a></li>
+      <li><a>About </a>
+        <ul class="about">
+          <li><a>A B C</a></li>
+          <li><a>About us</a></li>
+          <li><a>Leadership Team</a></li>
+          <li><a>Paramahamsa Foundation Trust</a></li>
+        </ul>
+      </li>
+      <li><a>Academic</a>
+        <ul class="types">
+          <li><a>UG-BE</a></li>
+          <li><a>PG</a></li>
+          <li><a>MBA</a></li>
+          <li><a>PG-MCA</a></li>
+          <li><a>Ph.D</a></li>
+          <li><a>science & Humanity</a></li>
+          <li><a>Our Staff</a></li>
+        </ul>
+      </li>
+      <li><a>Our Campus</a>
+        <ul class="details">
+          <li><a>A B C Campus</a></li>
+          <li><a>Student Life</a></li>
+          <li><a>Sports</a></li>
+          <li><a>Accommodation</a></li>
+          <li><a>Library & Information Center</a></li>
+        </ul>
+      </li>
+      <li><a> Admission</a>
+        <ul class="Admission">
+          <li><a>Admission Process</a></li>
+          <li><a>Apply Now</a></li>
+        </ul>
+      </li>
+      <li><a>Events</a></li>
+      <li><a>Policies</a>
+        <ul class="curricular">
+          <li><a>Gym</a></li>
+          <li><a>Support & Guidence</a></li>
+          <li><a>Students Activities</a></li>
+        </ul>
+      </li>
+      <li><a>Mandatory Disclosure</a>
+        <ul class="cell">
+          <li><a>IQAC</a></li>
+          <li><a>Statutory Cell</a></li>
+          <li><a>Women Grievance Redressel cell</a></li>
+          <li><a>Audited Statements</a></li>
+          <li><a>Human Resources</a></li>
+        </ul>
+      </li>
+      <li><a>Accreditations</a>
+
+        <ul class="naac">
+          <li><a>NAAC</a></li>
+        </ul>
+      </li>
+      <li><a>Statutory Cells</a>
+        <ul class="committee">
+          <li><a>ABCEC - Anti Ragging Committee</a></li>
+          <li><a>ABCEC - Minority Cell</a></li>
+          <li><a>ABCEC - Internal Complaint Committee</a></li>
+          <li><a>ABCEC - OBC committee</a></li>
+          <li><a>ABCEC - SC-ST Committee</a></li>
+          <li><a>ABCEC - Grievance Redressal committee</a></li>
+        </ul>
+      </li>
+      <li><a>EVC Video</a></li>
+    </ul>
+    <h1> Greatness. Inspired.</h1>
+    <p>Located in the Vicinity of Bangalore's Wilderness treasure, The Bannergatta National Park, ABC institutions
+      Bangalore is spread across 52 acres,comprisingof roman architectural infrastucture, making it a true beauty to
+      behold. </p>
+    <a1> &#8594 View Our Campus </a1>
+    <a2> Enquire now!</a2>
+  </div>
+  </div>
+
+</body>
+
+</html>
